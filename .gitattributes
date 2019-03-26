@@ -1,0 +1,4 @@
+* linguist-vendored
+*.vhd linguist-vendored=false
+*.vhf linguist-vendored=false
+*.xdc linguist-vendored=false
