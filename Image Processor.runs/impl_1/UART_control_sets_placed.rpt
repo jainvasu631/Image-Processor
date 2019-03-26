@@ -1,0 +1,88 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Mar 26 17:35:53 2019
+| Host         : DESKTOP-0D3LTK2 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file UART_control_sets_placed.rpt
+| Design       : UART
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    87 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           10 |
+|      4 |            3 |
+|      5 |            1 |
+|      8 |            2 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |               6 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              12 |           11 |
+| Yes          | No                    | Yes                    |              29 |            8 |
+| Yes          | Yes                   | No                     |             102 |           29 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+-----------------------------+-----------------------+------------------+----------------+
+|   Clock Signal  |        Enable Signal        |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
++-----------------+-----------------------------+-----------------------+------------------+----------------+
+|  CG/txclk_reg_0 |                             | reset_IBUF            |                1 |              1 |
+|  rxclk_BUFG     |                             | reset_IBUF            |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[5]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[3]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[4]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[6]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[8]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[7]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[1]_i_1_n_0   |                       |                1 |              1 |
+|  rxclk_BUFG     | RX/rx_register[2]_i_1_n_0   |                       |                1 |              1 |
+|  clk_IBUF_BUFG  |                             |                       |                3 |              4 |
+|  clk_IBUF_BUFG  |                             | reset_IBUF            |                4 |              4 |
+|  rxclk_BUFG     | RX/state0                   |                       |                3 |              4 |
+|  CG/txclk_reg_0 | TX/tx_out0_out              | reset_IBUF            |                2 |              5 |
+|  CG/txclk_reg_0 | TX/tx_register0             | reset_IBUF            |                2 |              8 |
+|  rxclk_BUFG     | RX/mini_register[8]_i_1_n_0 | RX/mini_register0     |                2 |              8 |
+|  rxclk_BUFG     | RX/rx_data0                 | reset_IBUF            |                4 |             16 |
+|  clk_IBUF_BUFG  | CG/p_0_in                   | CG/count1[31]_i_1_n_0 |                8 |             31 |
+|  clk_IBUF_BUFG  | CG/p_0_in                   | CG/count2[31]_i_1_n_0 |                8 |             31 |
+|  rxclk_BUFG     | CG/p_0_in                   | RX/mini_register0     |               11 |             32 |
++-----------------+-----------------------------+-----------------------+------------------+----------------+
+
+
